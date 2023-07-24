@@ -2,6 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -34,6 +35,96 @@ export default function RootLayout({
         </div>
 
         {children}
+
+        <div className="flex justify-evenly space-x-14 bg-[#0e0e0e] text-white p-10">
+          <div className="flex justify-between space-x-10 w-[45%]">
+            <div className="">
+              <h2 className="text-xl font-bold mb-3">About</h2>
+              <ul>
+                <li><Link href=''>History</Link></li>
+                <li><Link href=''>Whats On</Link></li>
+                <li><Link href=''>Shop</Link></li>
+                <li><Link href=''>Workshop</Link></li>
+              </ul>
+            </div>
+            <div className="">
+              <h2 className="text-xl font-bold mb-3">Motorcycle</h2>
+              <ul>
+                <li><Link href=''>Bike classification</Link></li>
+                <li><Link href=''>Technology</Link></li>
+                <li><Link href=''>Guide</Link></li>
+                <li><Link href=''>Bike Archive</Link></li>
+              </ul>
+            </div>
+            <div className="">
+              <h2 className="text-xl font-bold mb-3">Support</h2>
+              <ul>
+                <li><Link href=''>Waranty Terms & Contitions</Link></li>
+                <li><Link href=''>Bike/Waranty Registration</Link></li>
+                <li><Link href=''>Webstore FAQ</Link></li>
+                <li><Link href=''>Contact Us</Link></li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="w-[30%]">
+            <div className="mb-8">
+              <p className="mb-3">Subscribe to our workshop</p>
+              <div className="flex">
+                <input type="text" className="p-1 w-[60%] rounded-l-md" placeholder="Your email address" />
+                <button className='bg-[red] px-4 py-1 rounded-r-md'>SUBSCRIBE</button>
+              </div>
+            </div>
+
+            <div className="">
+              <p className="mb-3">Find Us On Social Media</p>
+              <div className="flex space-x-8 py-3">
+                <Image
+                  src="/image/icon/fb.png"
+                  alt="Vercel Logo"
+                  className="dark:invert"
+                  width={30}
+                  height={30}
+                  priority
+                />
+                <Image
+                  src="/image/icon/ig.png"
+                  alt="Vercel Logo"
+                  className="dark:invert"
+                  width={30}
+                  height={30}
+                  priority
+                />
+                <Image
+                  src="/image/icon/twitter.png"
+                  alt="Vercel Logo"
+                  className="dark:invert"
+                  width={30}
+                  height={30}
+                  priority
+                />
+                <Image
+                  src="/image/icon/tiktok.png"
+                  alt="Vercel Logo"
+                  className="dark:invert"
+                  width={30}
+                  height={30}
+                  priority
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex justify-between p-2 text-sm text-white bg-black">
+          <p className="">
+            Copyright@Ahmad Rafif Alaudin | 2023
+          </p>
+          <div className="flex space-x-4 w-[20%] justify-evenly">
+            <p>Official Store</p>
+            <p>Privacy Policy</p>
+          </div>
+        </div>
       </body>
     </html>
   )
